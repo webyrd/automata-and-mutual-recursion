@@ -35,4 +35,4 @@ In the video I demonstrate an old functional programming trick: how to encode a 
 If you find this interesting, you might want to read Shriram Krishnamurthi's 2006 Journal of Functional Programming paper, 'Automata via Macros':
 http://cs.brown.edu/~sk/Publications/Papers/Published/sk-automata-macros/
 
-Michael Sisper's overpriced but excellent 'Introduction to the Theory of Computation, third edition' contains the clearest explanation of finite automata I have seen.
+Michael Sipser's overpriced but excellent 'Introduction to the Theory of Computation, third edition' contains the clearest explanation of finite automata I have seen.

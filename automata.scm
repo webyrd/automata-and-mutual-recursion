@@ -4,7 +4,7 @@
 ;;; Three Scheme implementations of the example deterministic finite automaton (DFA) from:
 ;;; http://en.wikipedia.org/wiki/Deterministic_finite_automaton
 
-;;; Here is the DFA in the form of a 5-tuple (as described on p. 35 of Michael Sisper's overpriced but excellent 'Introduction to the Theory of Computation, third edition')
+;;; Here is the DFA in the form of a 5-tuple (as described on p. 35 of Michael Sipser's overpriced but excellent 'Introduction to the Theory of Computation, third edition')
 
 ;;; (Q Sigma delta q0 F)
 ;;;
