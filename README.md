@@ -15,6 +15,9 @@ http://en.wikipedia.org/wiki/Deterministic_finite_automaton
 `automata-mk.scm`
 translation of the second DFA implementation from `automata.scm` into the miniKanren relational language
 
+`automata-mk2.scm`
+translation of the third DFA implementation from `automata.scm` into the miniKanren relational language
+
 Support files:
 
 `pmatch.scm`
@@ -40,4 +43,4 @@ Michael Sipser's overpriced but excellent 'Introduction to the Theory of Computa
 
 CHALLENGE:
 
-Translate `fsm-ho2` from `automata.scm` to miniKanren, without using `project`.  This should be possible by using a meta-circular interpreter that can run miniKanren inside miniKanren.  This interpreter would also need to handle the subset of Scheme used in the code, such as `letrec`.
+Translate `fsm-ho2` from `automata.scm` to miniKanren, without using `project`.  (See the comment at the top of `automata-mk2.scm`)  This should be possible by using a meta-circular interpreter that can run miniKanren inside miniKanren.  This interpreter would also need to handle the subset of Scheme used in the code, such as `letrec`.
