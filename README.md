@@ -36,3 +36,8 @@ If you find this interesting, you might want to read Shriram Krishnamurthi's 200
 http://cs.brown.edu/~sk/Publications/Papers/Published/sk-automata-macros/
 
 Michael Sipser's overpriced but excellent 'Introduction to the Theory of Computation, third edition' contains the clearest explanation of finite automata I have seen.
+
+
+CHALLENGE:
+
+Translate `fsm-ho2` from `automata.scm` to miniKanren, without using `project`.  This should be possible by using a meta-circular interpreter that can run miniKanren inside miniKanren.  This interpreter would also need to handle the subset of Scheme used in the code, such as `letrec`.
