@@ -5,31 +5,31 @@
 
 (define fsm-hoo
   (lambda (str out)
-    (letrec ([S0 (lambda (str out)
+    (letrec ([S0 (lambda (str)
                    (conde
                      [(== '() str) (== 'accept out)]
                      [(fresh (a d)
                         (== `(,a . ,d) str)
                         (conde
-                          [(== 0 a) (S0 d out)]
-                          [(== 1 a) (S1 d out)]))]))]
-             [S1 (lambda (str out)
+                          [(== 0 a) (S0 d)]
+                          [(== 1 a) (S1 d)]))]))]
+             [S1 (lambda (str)
                    (conde
                      [(== '() str) (== 'reject out)]
                      [(fresh (a d)
                         (== `(,a . ,d) str)
                         (conde
-                          [(== 0 a) (S2 d out)]
-                          [(== 1 a) (S0 d out)]))]))]
-             [S2 (lambda (str out)
+                          [(== 0 a) (S2 d)]
+                          [(== 1 a) (S0 d)]))]))]
+             [S2 (lambda (str)
                    (conde
                      [(== '() str) (== 'reject out)]
                      [(fresh (a d)
                         (== `(,a . ,d) str)
                         (conde
-                          [(== 0 a) (S1 d out)]
-                          [(== 1 a) (S2 d out)]))]))])
-      (S0 str out))))
+                          [(== 0 a) (S1 d)]
+                          [(== 1 a) (S2 d)]))]))])
+      (S0 str))))
 
 (test "fsm-hoo-1"
   (run* (q) (fsm-hoo '(0 1 1) q))
